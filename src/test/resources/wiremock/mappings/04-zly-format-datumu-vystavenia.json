@@ -1,0 +1,15 @@
+{
+  "priority": 2,
+  "request": {
+    "method": "POST",
+    "urlPattern": ".*",
+    "bodyPatterns": [
+      { "matchesJsonPath": "$..[?(@.archetype_id == 'CEN-EN13606_2019-COMPOSITION.eDPN.v4/at0031' && @.value['@value'] =~ /^(?!(\\d{4}|\\d{4}-\\d{2}|\\d{4}-\\d{2}-\\d{2}|\\d{8})$).*$/)]" }
+    ]
+  },
+  "response": {
+    "status": 400,
+    "headers": { "Content-Type": "application/json" },
+    "jsonBody": { "result": { "code": "E000004", "message": "Hodnota at0031 (Dátum vystavenia) nie je dátum podľa ISO 8601" } }
+  }
+}

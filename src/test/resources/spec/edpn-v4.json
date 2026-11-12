@@ -1,0 +1,71 @@
+{
+  "key": "edpn",
+  "archetype": "CEN-EN13606_2019-COMPOSITION.eDPN.v4",
+  "rcRoot": "1.3.158.00165387.100.40.400",
+  "content": [
+    { "key": "potvrdenieDocasnejPraceneschopnosti", "rm": "ENTRY", "at": "at0013", "occ": "1..1", "children": [
+      { "key": "datumVystavenia", "rm": "ELEMENT", "at": "at0031", "occ": "1..1", "type": "DATE" },
+      { "key": "datumZmeny", "rm": "ELEMENT", "at": "at0032", "occ": "1..1", "type": "DATE" },
+      { "key": "liecbaVCudzine", "rm": "ELEMENT", "at": "at0033", "occ": "1..1", "type": "BOOLEAN" },
+      { "key": "praceneschopnyOd", "rm": "ELEMENT", "at": "at0034", "occ": "1..1", "type": "DATE" },
+      { "key": "pobytVCasePracovnejNeschopnosti", "rm": "ELEMENT", "at": "at0035", "occ": "0..1", "type": "ATTACHMENT" },
+      { "key": "poznamka", "rm": "ELEMENT", "at": "at0036", "occ": "0..1", "type": "SIMPLE_TEXT" },
+      { "key": "schopnyPraceOd", "rm": "ELEMENT", "at": "at0037", "occ": "0..1", "type": "DATE" },
+      { "key": "telefon", "rm": "ELEMENT", "at": "at0038", "occ": "0..1", "type": "SIMPLE_TEXT" },
+      { "key": "idZaznamuVysetrenia", "rm": "ELEMENT", "at": "at0039", "occ": "0..1", "type": "INSTANCE_IDENTIFIER" },
+      { "key": "datumUmrtia", "rm": "ELEMENT", "at": "at0040", "occ": "0..1", "type": "DATE" },
+      { "key": "automatickyUkoncenaSystemom", "rm": "ELEMENT", "at": "at0085", "occ": "1..1", "type": "BOOLEAN" },
+      { "key": "verziaSluzbyeDpn", "rm": "ELEMENT", "at": "at0056", "occ": "1..1", "type": "INTEGER" }
+    ]},
+    { "key": "diagnoza", "rm": "ENTRY", "at": "at0014", "occ": "1..1", "children": [
+      { "key": "diagnoza", "rm": "ELEMENT", "at": "at0019", "occ": "1..1", "type": "CODED_VALUE", "codeSystem": "1.3.158.00165387.100.10.25" },
+      { "key": "platnostOd", "rm": "ELEMENT", "at": "at0020", "occ": "0..1", "type": "DATE" }
+    ]},
+    { "key": "dovodPracovnejNeschopnosti", "rm": "ENTRY", "at": "at0015", "occ": "1..1", "children": [
+      { "key": "dovod", "rm": "ELEMENT", "at": "at0074", "occ": "1..1", "type": "CODED_VALUE", "codeSystem": "1.3.158.00165387.100.10.265" },
+      { "key": "platnostOd", "rm": "ELEMENT", "at": "at0075", "occ": "0..1", "type": "DATE" },
+      { "key": "pozitieAlkoholu", "rm": "ELEMENT", "at": "at0076", "occ": "1..1", "type": "CODED_VALUE", "codeSystem": "1.3.158.00165387.100.10.702" }
+    ]},
+    { "key": "trvaniePracovnejNeschopnosti", "rm": "ENTRY", "at": "at0016", "occ": "1..1", "children": [
+      { "key": "datumPredpokladanehoUkoncenia", "rm": "ELEMENT", "at": "at0088", "occ": "1..1", "type": "DATE" },
+      { "key": "poznamka", "rm": "ELEMENT", "at": "at0089", "occ": "0..1", "type": "SIMPLE_TEXT" },
+      { "key": "informaciaONasledujucejKontrole", "rm": "ELEMENT", "at": "at0127", "occ": "0..1", "type": "CODED_VALUE", "codeSystem": "1.3.158.00165387.100.10.686" }
+    ]},
+    { "key": "vychadzky", "rm": "ENTRY", "at": "at0017", "occ": "0..1", "children": [
+      { "key": "povolenaVychadzka", "rm": "CLUSTER", "at": "at0097", "occ": "1..*", "children": [
+        { "key": "casOd", "rm": "ELEMENT", "at": "at0102", "occ": "1..1", "type": "TIME" },
+        { "key": "casDo", "rm": "ELEMENT", "at": "at0103", "occ": "1..1", "type": "TIME" },
+        { "key": "datumOd", "rm": "ELEMENT", "at": "at0104", "occ": "0..1", "type": "DATE" }
+      ]}
+    ]},
+    { "key": "vynimkaZPoistenia", "rm": "ENTRY", "at": "at0096", "occ": "0..*", "children": [
+      { "key": "cisloPoistenia", "rm": "ELEMENT", "at": "at0114", "occ": "0..*", "type": "INSTANCE_IDENTIFIER" }
+    ]},
+    { "key": "zmenaStavuZaznamu", "rm": "ENTRY", "at": "at0120", "occ": "0..1", "children": [
+      { "key": "zmenaStavuZaznamu", "rm": "CLUSTER", "at": "at0121", "occ": "1..1", "slot": "Zmena_stavu_zaznamu.v2" }
+    ]},
+    { "key": "zaznamVytvoril", "rm": "ENTRY", "at": "at0133", "occ": "1..1", "children": [
+      { "key": "zaznamVytvoril", "rm": "CLUSTER", "at": "at0136", "occ": "1..1", "slot": "Zdravotnicky_pracovnik_odborneho_utvaru.v2" }
+    ]}
+  ],
+  "slots": {
+    "Zdravotnicky_pracovnik_odborneho_utvaru.v2": {
+      "archetype": "CEN-EN13606_2019-CLUSTER.Zdravotnicky_pracovnik_odborneho_utvaru.v2",
+      "parts": [
+        { "key": "identifikaciaOuPzs", "rm": "ELEMENT", "at": "at0003", "occ": "0..1", "type": "INSTANCE_IDENTIFIER", "root": "1.3.158.00165387.100.40.70" },
+        { "key": "identifikaciaZprac", "rm": "ELEMENT", "at": "at0004", "occ": "1..1", "type": "INSTANCE_IDENTIFIER", "root": "1.3.158.00165387.100.40.90" },
+        { "key": "nezmluvnyLekar", "rm": "ELEMENT", "at": "at0005", "occ": "0..1", "type": "BOOLEAN" },
+        { "key": "specializaciaLekara", "rm": "ELEMENT", "at": "at0006", "occ": "1..1", "type": "CODED_VALUE", "codeSystem": "1.3.158.00165387.100.10.34" }
+      ]
+    },
+    "Zmena_stavu_zaznamu.v2": {
+      "archetype": "CEN-EN13606_2019-CLUSTER.Zmena_stavu_zaznamu.v2",
+      "parts": [
+        { "key": "datumACasStorna", "rm": "ELEMENT", "at": "at0001", "occ": "1..1", "type": "DATE_TIME" },
+        { "key": "dovodStorna", "rm": "ELEMENT", "at": "at0002", "occ": "0..1", "type": "SIMPLE_TEXT" },
+        { "key": "stornoval", "rm": "CLUSTER", "at": "at0003", "occ": "1..1", "slot": "Zdravotnicky_pracovnik_odborneho_utvaru.v2" },
+        { "key": "dovodStornaCv", "rm": "ELEMENT", "at": "at0007", "occ": "0..1", "type": "CODED_VALUE", "codeSystem": "1.3.158.00165387.100.10.352" }
+      ]
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "source": "NCZI, Číselníky zdravotníckej informatiky, XML súbory stiahnuté 2026-11-11. Verzia = codingSchemeVersion, kód = codeValue.",
+  "codelists": {
+    "1.3.158.00165387.100.10.25": {
+      "name": "Zoznam diagnóz",
+      "version": "27",
+      "codes": {
+        "02089403436": "Akútna infekcia horných dýchacích ciest, bližšie neurčená",
+        "02089403519": "Chrípka zapríčinená neidentifikovaným vírusom, s inými respiračnými prejavmi"
+      }
+    },
+    "1.3.158.00165387.100.10.265": {
+      "name": "Dôvod pracovnej neschopnosti",
+      "version": "2",
+      "codes": {
+        "02089917385": "Choroba",
+        "02089917401": "Úraz"
+      }
+    },
+    "1.3.158.00165387.100.10.702": {
+      "name": "Hodnotiace kritériá",
+      "version": "2",
+      "codes": {
+        "02090417748": "áno",
+        "02090417805": "nie"
+      }
+    },
+    "1.3.158.00165387.100.10.686": {
+      "name": "Nasledujúce kontrolné vyšetrenie dočasnej pracovnej neschopnosti",
+      "version": "2",
+      "codes": {
+        "02090388493": "Nasledujúca kontrola u toho istého lekára, ktorý vykonal poslednú kontrolu"
+      }
+    },
+    "1.3.158.00165387.100.10.34": {
+      "name": "Zdravotnícka odbornosť",
+      "version": "18",
+      "codes": {
+        "00000461517": "všeobecné lekárstvo"
+      }
+    },
+    "1.3.158.00165387.100.10.352": {
+      "name": "Dôvod storna zdravotného záznamu",
+      "version": "1",
+      "codes": {
+        "02090050119": "Nesprávne zapísaný údaj v zázname"
+      }
+    }
+  }
+}

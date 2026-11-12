@@ -1,0 +1,23 @@
+{
+  "priority": 10,
+  "request": {
+    "method": "POST",
+    "urlPattern": ".*"
+  },
+  "response": {
+    "status": 200,
+    "headers": { "Content-Type": "application/json" },
+    "transformers": ["response-template"],
+    "jsonBody": {
+      "result": { "code": 0, "message": "OK" },
+      "data": {
+        "zapisPotvrdenieDpn": {
+          "idPotvrdeniaDpn": {
+            "@root": "1.3.158.00165387.100.40.400",
+            "@extension": "{{jsonPath request.body '$.ehr_extract.compositions[0].edpn.rc_id.@extension'}}"
+          }
+        }
+      }
+    }
+  }
+}

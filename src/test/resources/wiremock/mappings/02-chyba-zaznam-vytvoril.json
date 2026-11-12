@@ -1,0 +1,15 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "POST",
+    "urlPattern": ".*",
+    "bodyPatterns": [
+      { "not": { "matchesJsonPath": "$..[?(@.archetype_id == 'CEN-EN13606_2019-COMPOSITION.eDPN.v4/at0133')]" } }
+    ]
+  },
+  "response": {
+    "status": 400,
+    "headers": { "Content-Type": "application/json" },
+    "jsonBody": { "result": { "code": "E000003", "message": "Chýba povinný uzol at0133 (Záznam vytvoril)" } }
+  }
+}
